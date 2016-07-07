@@ -50,7 +50,9 @@ var DogSchema = new mongoose.Schema({
     // ids in mongoose. the ref key is telling mongoose what model that
     // id belongs too. Helpful for when we ask the dog who its owner is
     owner: {
+        // ObjectId's are indexed so looking them up is really fast compared to other properties .find()
         type: mongoose.Schema.Types.ObjectId, // This id is referencing some owner in our database
+
         ref: 'owner', // Here are referencing the owner schema in the database
         required: true // Must have this before saving
     }
