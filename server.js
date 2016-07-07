@@ -6,9 +6,6 @@ var app = express();
 
 
 
-
-
-
 // require the mongojs drive so we can talk to our database in a more user friendly way
 var mongoJS = require('mongojs');
 
