@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ng-app="artistApp">
+
+<head>
+
+  <!--title-->
+  <title>Angular Service</title>
+
+  <!--Meta-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Styles-->
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+</head>
+
+<body>
+<main class="main-wrapper" ng-controller="FirstCtrl">
+
+
+  <form class="form">
+    <h1>Artist Info</h1> Artist Name:
+    <input type="text" placeholder="Name" ng-model="name">
+    Artist Genre:
+    <input type="text" placeholder="genre" ng-model="genre">
+    Artist Score:
+    <input type="number" placeholder="0 - 100" ng-model="score">
+    <button type="submit" ng-click="addArtist()"> Add </button>
+  </form>
+
+
+  <div ng-repeat="artist in artists">
+  {{artist.name}}
+  {{artist.genre}}
+  {{artist.rating}}
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!--<form>-->
+    <!--<input type="text" placeholder="name" ng-model="name">-->
+    <!--<input type="text" placeholder="genre" ng-model="genre">-->
+    <!--<input type="text" placeholder="rating" ng-model="rating">-->
+
+    <!--<button type="submit" ng-click="addArtist()">Add Artist</button>-->
+
+  <!--</form>-->
+
+  <!--<button ng-click="getAllArtist()">Get ALl</button>-->
+
+
+
+  <!--<input type="text" ng-model="id"  placeholder="id">-->
+  <!--<button ng-click="getArtist()">Get Artist</button>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--<section class="list-main-container">-->
+    <!--<div class="list-container">-->
+      <!--<h2 ng-show='reallyLike.length != 0' class="list-header">really Like</h2>-->
+      <!--<div class='item' ng-repeat="artist in reallyLike">-->
+        <!--<h4>Name: {{artist.name}}</h4>-->
+        <!--<h4> Genre: {{artist.genre}} </h4>-->
+        <!--<h4> Score: {{artist.score}} </h4>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="list-container">-->
+      <!--<h2 ng-show='kindOfLike.length != 0' class="list-header">kind of Like</h2>-->
+      <!--<div class='item' ng-repeat="artist in kindOfLike">-->
+        <!--<h4>Name: {{artist.name}}</h4>-->
+        <!--<h4> Genre: {{artist.genre}} </h4>-->
+        <!--<h4> Score: {{artist.score}} </h4>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</section>-->
+
+
+
+
+
+
+  <!--<ul>-->
+  <!--<li ng-repeat="message in messages">-->
+  <!--&lt;!&ndash; edit a message &ndash;&gt;-->
+  <!--<input ng-model="message.text" ng-change="messages.$save(message)" />-->
+  <!--&lt;!&ndash; delete a message &ndash;&gt;-->
+  <!--<button ng-click="messages.$remove(message)">Delete Message</button>-->
+  <!--</li>-->
+  <!--</ul>-->
+  <!--&lt;!&ndash; push a new message onto the array &ndash;&gt;-->
+  <!--<form ng-submit="addMessage()">-->
+  <!--<input ng-model="newMessageText" />-->
+  <!--<button type="submit">Add Message</button>-->
+  <!--</form>-->
+</main>
+
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+<script src="app.js"></script>
+<script src="FirstController.js"></script>
+<script src="service.js"></script>
+
+
+
+</body>
+
+</html>
